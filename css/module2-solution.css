@@ -79,7 +79,7 @@ h1 {
   }
 }
 
-.content {
+section {
   position: relative;
   overflow: hidden;
   padding: 40px 15px 15px 15px;
@@ -87,7 +87,7 @@ h1 {
   border: 1px solid black;
 }
 
-.section {
+section > .title {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -101,20 +101,20 @@ h1 {
   line-height: 30px;
 }
 
-.chicken {
+.title.chicken {
   background-color: #fdacac;
 }
 
-.beef {
+.title.beef {
   color: #ffffff;
   background-color: #d83434;
 }
 
-.sushi {
+.title.sushi {
   background-color: #f5ebb2;
 }
 
-p {
+section > p {
   margin: 0;
   text-align: left;
 }
