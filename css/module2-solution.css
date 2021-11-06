@@ -2,7 +2,13 @@
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  margin: 0;
   font-family: helvetica, arial, sans-serif;
+  color: #000000;
 }
 
 
@@ -30,13 +36,11 @@
 /********** Page specific styles **********/
 
 h1 {
-  color: #000000;
   font-size: 1.75rem; /* 75% larger than the font size of the dummy text */
   text-transform: capitalize;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 10px;
-  font-weight: 600;
 }
 
 /* Tablet */
@@ -56,37 +60,44 @@ h1 {
 .container {
   width: 100%;
   overflow: auto;
-  padding-right: 5px;
-  padding-left: 5px;
 }
 
 .row {
   width: 100%;
 }
 
+/* Matches all classes starting with 'col-' */
 [class^='col-'] {
   float: left;
-  padding: 10px;
+  padding: 10px 20px;
+}
+
+/* Tablet + Desktop */
+@media (min-width: 768px) {
+  [class^='col-'] {
+    padding: 10px;
+  }
 }
 
 .content {
-  padding: 40px 15px 15px 15px;
-  border: 1px solid black;
-  background-color: #ccd2d0;
   position: relative;
+  overflow: hidden;
+  padding: 40px 15px 15px 15px;
+  background-color: #ccd2d0;
+  border: 1px solid black;
 }
 
 .section {
   position: absolute;
-  width: 150px;
-  height: 30px;
   top: -1px;
   right: -1px;
+  width: 150px;
+  height: 30px;
   border: 1px solid #000000;
-  text-align: center;
   font-size: 1.25rem; /* 25% larger than the font size of the dummy text */
   text-transform: capitalize;
-  font-weight: 600;
+  text-align: center;
+  font-weight: bold;
   line-height: 30px;
 }
 
@@ -104,8 +115,6 @@ h1 {
 }
 
 p {
-  color: #000000;
-  font-weight: 100;
   margin: 0;
   text-align: left;
 }
